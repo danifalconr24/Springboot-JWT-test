@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: dfalconr
+    password: MyN3wP@ssw0rd!
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+  authentication:
+    jwt:
+      secret: c3ByaW5nYm9vdC1qd3QtdGVzdC1hcHAtc2VjcmV0
+      expiration: 86400000
