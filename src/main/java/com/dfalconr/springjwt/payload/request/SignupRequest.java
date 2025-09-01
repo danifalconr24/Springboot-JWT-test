@@ -1,5 +1,6 @@
 package com.dfalconr.springjwt.payload.request;
 
+import com.dfalconr.springjwt.models.ERole;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -16,7 +17,7 @@ public class SignupRequest {
     @Email
     private String email;
 
-    private Set<String> role;
+    private Set<ERole> role;
 
     @NotBlank
     @Size(min = 6, max = 40)
@@ -46,11 +47,11 @@ public class SignupRequest {
         this.password = password;
     }
 
-    public Set<String> getRole() {
+    public Set<ERole> getRole() {
         return this.role;
     }
 
-    public void setRole(Set<String> role) {
+    public void setRole(Set<ERole> role) {
         this.role = role;
     }
 }

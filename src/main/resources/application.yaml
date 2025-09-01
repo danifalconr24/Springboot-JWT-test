@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
-    username: dfalconr
-    password: MyN3wP@ssw0rd!
+    username: ${DB_USER:dfalconr}
+    password: ${DB_PASSWORD:MyN3wP@ssw0rd!}
   jpa:
     properties:
       hibernate:
@@ -11,5 +11,5 @@ spring:
       ddl-auto: create-drop
   authentication:
     jwt:
-      secret: c3ByaW5nYm9vdC1qd3QtdGVzdC1hcHAtc2VjcmV0
+      secret: ${JWT_SECRET:c3ByaW5nYm9vdC1qd3QtdGVzdC1hcHAtc2VjcmV0}
       expiration: 86400000
